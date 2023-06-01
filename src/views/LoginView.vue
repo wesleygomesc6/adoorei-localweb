@@ -25,10 +25,15 @@
   </main>
 </template>
 <script>
+import Usuario from '@/models/Usuario.ts'
 export default {
   data() {
     return {
+      usuario: new Usuario()
     }
+  },
+  methods : {
+
   }
 }
 </script>

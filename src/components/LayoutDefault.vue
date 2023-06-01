@@ -2,6 +2,7 @@
     <main>
         <div class="app-bar">
             <img src="../../public/localweb.png" alt="Logo LocalWeb" />
+            <div class="icone">W</div>
         </div>
         <div class="conteudo">
             <div class="container">
@@ -30,6 +31,7 @@ main {
 .app-bar {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     box-sizing: border-box;
     width: 100vw;
     height: 70px;
@@ -39,6 +41,16 @@ main {
 
 .app-bar img {
     max-height: 60%;
+}
+
+.icone {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-primaria);
 }
 
 .conteudo {

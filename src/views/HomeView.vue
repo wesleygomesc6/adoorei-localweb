@@ -28,10 +28,44 @@ export default {
 .video {
     padding: 20px 0px;
     min-width: 720px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .videoi {
     width: 100%;
     height: 450px;
+}
+
+@media (max-width : 750px) {
+    .videoi {
+        width: 80%;
+        height: 400px;
+
+    }
+
+    .video {
+        min-width: 700px;
+    }
+
+    .main {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width : 600px) {
+    .videoi {
+        width: 100%;
+        height: 320px;
+
+    }
+
+    .video {
+        min-width: 400px;
+    }
 }
 </style>
