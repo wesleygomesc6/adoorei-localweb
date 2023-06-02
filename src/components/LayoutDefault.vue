@@ -4,6 +4,7 @@
             <img src="../../public/localweb.png" alt="Logo LocalWeb" />
             <div class="icone">W</div>
         </div>
+        <v-app-bar-title>Photos</v-app-bar-title>
         <div class="conteudo">
             <div class="container">
                 <slot></slot>

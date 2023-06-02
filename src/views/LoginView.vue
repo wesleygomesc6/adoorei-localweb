@@ -1,5 +1,6 @@
 <template>
   <main>
+    <v-app-bar-title color="#ffffff">Photos</v-app-bar-title>
     <img class="imagem-logo" src="../../public/localweb.png" alt="Logo Localweb" />
     <div class="formulario">
       <form>
@@ -25,11 +26,10 @@
   </main>
 </template>
 <script>
-import Usuario from '@/models/Usuario.ts'
+
 export default {
   data() {
     return {
-      usuario: new Usuario()
     }
   },
   methods : {

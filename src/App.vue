@@ -1,30 +1,21 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-</script>
-
 <template>
-  <!-- <header>
-    <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-    </nav>
-  </header> -->
-
-  <RouterView />
+  <v-app>
+    <v-main>
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
 
-<style scoped>
-/* nav a.router-link-exact-active {
-  color: var(--color-text);
-}
+<script lang="ts">
+import { defineComponent } from 'vue'
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
+export default defineComponent({
+  name: 'App',
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-} */
-</style>
+  data () {
+    return {
+      //
+    }
+  },
+})
+</script>
