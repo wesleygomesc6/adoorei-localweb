@@ -1,5 +1,5 @@
 <template>
-    <LayoutDefault>
+    <LayoutDefault :usuario="usuario">
         <v-container class="d-flex justify-center">
             <v-col cols="12" md="8" sm="10">
                 <h1>Olá Wesley,</h1>
@@ -18,7 +18,7 @@ export default {
     components: { LayoutDefault },
     data() {
         return {
-
+            usuario: this.$store.state.usuario
         }
     }
 }

@@ -1,14 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'login',
+    component: function () {
+      return import( '@/views/HomeView.vue')
+    }
   },
   {
     path: '/home',
@@ -18,17 +19,17 @@ const routes = [
     }
   },
   {
+    path: '/cadastro/plano/:cod',
+    name: 'cadastro',
+    component: function () {
+      return import( '@/views/Cadastro.vue')
+    }
+  },
+  {
     path: '/planos',
     name: 'planos',
     component: function () {
       return import( '@/views/Planos.vue')
-    }
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: function () {
-      return import( '../views/AboutView.vue')
     }
   }
 ]

@@ -11,7 +11,7 @@
           <span class="text-body-1">Para acessar a sua conta informe seu e-mail e senha</span>
         </v-card-title>
         <v-card-text>
-          <Formulario />
+          <Formulario :modoFormulario="'login'" />
         </v-card-text>
       </v-card>
       <div class="container-fluid my-3 d-flex justify-center">
@@ -31,12 +31,8 @@ export default {
   },
   data() {
     return {
-      dados: {}
     }
   },
-  created() {
-
-  }
 
 }
 </script>
