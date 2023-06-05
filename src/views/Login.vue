@@ -15,7 +15,7 @@
         </v-card-text>
       </v-card>
       <div class="container-fluid my-3 d-flex justify-center">
-        <span class="text-body-1">Ainda não tem conta? <a herf="">Cadastre-se</a> </span>
+        <span class="text-body-1">Ainda não tem conta? <router-link to="planos">Cadastre-se</router-link> </span>
       </div>
     </v-col>
   </v-container>
@@ -25,7 +25,7 @@
 import Formulario from '@/components/Formulario.vue'
 
 export default {
-  name: 'Home',
+  name: 'Login',
   components: {
     Formulario
   },

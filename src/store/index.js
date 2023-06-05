@@ -5,7 +5,6 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    usuario: '',
     planos: [{
       cod: 1,
       nome: 'Hospedagem 1',

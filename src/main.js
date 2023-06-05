@@ -5,7 +5,11 @@ import store from './store'
 import vuetify from './plugins/vuetify'
 import axios from 'axios'
 
-Vue.prototype.$http = axios
+const api = axios.create({
+  baseURL: 'https://fakestoreapi.com/',
+});
+
+Vue.prototype.$http = api
 
 Vue.config.productionTip = false
 

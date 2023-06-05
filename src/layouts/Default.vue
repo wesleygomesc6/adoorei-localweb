@@ -4,11 +4,9 @@
 
             <v-img src="@/assets/localweb.png" alt="Logo LocalWeb" max-width="100px" />
             <v-spacer />
-            <!-- <v-avatar size="40">
-                <v-img src="https://cdn.vuetifyjs.com/images/lists/2.jpg"></v-img>
-            </v-avatar> -->
             <v-menu bottom rounded offset-y>
                 <template v-slot:activator="{ on }">
+
                     <v-btn icon x-large v-on="on">
                         <v-avatar color="brown" size="48">
                             <span class="white--text text-h5">{{ usuario[0].toUpperCase() }}</span>
@@ -17,9 +15,11 @@
                 </template>
 
                 <div class="mx-auto text-center">
-                    <v-btn @click="logout">
-                        Sair
-                    </v-btn>
+                    <router-link to="login">
+                        <v-btn @click="logout">
+                            Sair
+                        </v-btn>
+                    </router-link>
                 </div>
 
             </v-menu>
@@ -38,7 +38,7 @@ export default {
     name: 'LayoutDefault',
     methods: {
         logout() {
-            this.$router.push('/')
+            localStorage.clear()
         }
     }
 }

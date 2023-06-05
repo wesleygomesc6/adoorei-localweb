@@ -1,8 +1,12 @@
 <template>
-    <div class="container-fluid d-block d-sm-flex justify-center">
+    <div class="container-fluid d-sm-flex justify-center">
         <template v-for="plano in planos">
-            <v-card class="ma-2 text-center" width="280px">
-
+            <v-card class="text-center ma-4" width="280px">
+                <slot></slot>
+                <div class="secondary mais white--text rounded-pill mx-auto"
+                    v-if="plano.maisUsado === true && $route.name === 'planos'">
+                    MAIS USADO
+                </div>
                 <v-card-title>
                     <div class="container justify-center font-weight-bold text-h5">{{ plano.nome }}</div>
                 </v-card-title>
@@ -53,23 +57,41 @@
                                 <v-icon small>mdi-check</v-icon> {{ extra }};</span>
                         </template>
                     </div>
+                    <div class="container" v-if="exibirBtn !== true">
+                        <v-btn color="primary" outlined text x-large width="100%" @click="redirectPlanos()">
+                            TROCAR PLANO
+                        </v-btn>
+                    </div>
+
                 </v-card-text>
-            </v-card></template>
+            </v-card>
+        </template>
     </div>
 </template>
 <script>
 export default {
     name: 'CardPlanos',
-    props: ['planos', 'exibirBtn'],
+    props: ['planos', 'exibirBtn', 'exibirDetalhes'],
     data() {
         return {
-            
+
         }
     },
     methods: {
         redirectCadastro(codPlano) {
             this.$router.push(`cadastro/plano/${codPlano}`)
+        },
+        redirectPlanos() {
+            this.$router.push({ name: 'planos' })
         }
     }
 }
 </script>
+<style>
+.mais {
+    position: relative;
+    max-width: 60%;
+    top: -15px;
+    margin-bottom: -30px;
+}
+</style>

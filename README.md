@@ -1,5 +1,15 @@
 # adoorei-localweb
 
+## Usuario e senha para login
+#### Opções de login
+```
+username: derek
+senha: jklg*_56
+
+username: johnd
+senha: m38rmF$
+
+```
 ## Project setup
 ```
 npm install
