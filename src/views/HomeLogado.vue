@@ -2,7 +2,7 @@
     <LayoutDefault :usuario="usuario">
         <v-container class="d-flex justify-center">
             <v-col cols="12" md="10">
-                <h1>Olá Wesley,</h1>
+                <h1>Olá {{ usuario[0].toUpperCase()+usuario.substring(1) }},</h1>
                 <span class="text-body-1 d-block mb-5">Sejá bem-vindo(a) a sua conta de hospedagem.</span>
                 <iframe class="video" src="https://www.youtube.com/embed/zcXtyKdP92c" title="YouTube video player"
                     frameborder="0"
