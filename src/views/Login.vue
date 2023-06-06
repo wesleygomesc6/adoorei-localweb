@@ -1,6 +1,6 @@
 <template>
   <v-container class="d-flex justify-center">
-    <v-col cols="12" md="6" sm="8">
+    <v-col cols="12" sm="6" md="4">
       <div class="container-fluid my-5 d-flex justify-center">
 
         <v-img src="@/assets/localweb.png" max-width="200px"></v-img>

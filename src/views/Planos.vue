@@ -1,6 +1,6 @@
 <template>
     <v-container fluid class="d-flex justify-center">
-        <v-col cols="12" md="10">
+        <v-col cols="12" sm="10" md="8">
             <HeaderPlano />
             <div class="text-center my-4 text-subtitle-1">Escolha seu plano</div>
             <div class="d-flex justify-center my-5">
